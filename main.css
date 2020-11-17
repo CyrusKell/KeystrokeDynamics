@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Sora";
+  background: #fea546;
+  background: linear-gradient(315deg, #fea546 0%, #fe6e03 50%, #c24023 100%)
+    no-repeat;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+button {
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: "Sora";
+  width: 230px;
+  padding: 16px 22px;
+  margin-top: 20px;
+  background: none;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Sora";
+  width: 200px;
+  height: 30px;
+  padding: 12px 16px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.form-input {
+  transition: all 0.4s ease-in-out;
+}
+
+.form-input:hover, .form-input:focus {
+  transform: scale(1.05);
+}
+
+#user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-container,
+.container {
+  max-width: 1280px;
+  margin: auto;
+  height: 100vh;
+  width: 100%;
+}
+
+#main-container {
+  display: none;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#key-fields {
+  position: absolute;
+  top: 35vh;
+  left: calc(50vw - 27.5vw);
+}
+
+.main-field {
+  height: 7.5vh;
+  width: 55vw;
+  border: 2px solid white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  display: block;
+  border-radius: 5px;
+}
+
+#key-input {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#key-name-input {
+  height: 50px;
+  width: 35vw;
+  font-family: "Sora";
+  font-size: 20px;
+  padding-left: 8px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+#key-text {
+  height: 110px;
+  text-align: left;
+  padding: 2px;
+  overflow: hidden;
+}
+
+#key-text-content {
+  padding: 8px;
+  font-size: 41px;
+  font-family: 'Times New Roman';
+}
+
+#key-input {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#key-input-container {
+  max-width: 70%;
+}
+
+#key-input-content {
+  height: 50px;
+  width: 35vw;
+  font-family: "Sora";
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  padding-left: 8px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+span {
+  padding: 3px 8px;
+  padding-right: 0;
+  margin-right: 2px;
+}
+
+span.highlight {
+  background-color: rgba(255, 179, 0, 0.7);
+}
+
+span.error {
+  background-color: rgba(208, 33, 32, 0.7);
+}
+
+#notification {
+  left: calc(50vw - 232px);
+  top: calc(50vh - 232px);
+  border-radius: 15px;
+  position: fixed;
+  z-index: 100;
+  width: 400px;
+  height: 215px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background:#ff8800;
+  text-align: center;
+}
+
+#notification a {
+  color: blue;
+}
+
+#gray-back {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#ad {
+  top: 27vh;
+  left: 43vw;
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  z-index: 100;
+  cursor: pointer;
+  display: none;
+}
