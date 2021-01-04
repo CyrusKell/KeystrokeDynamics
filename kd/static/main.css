@@ -127,7 +127,7 @@ input {
 }
 
 
-@media (min-height: 800px) {
+@media (min-height: 430px) {
   #user {
     height: 95vh;
   }
