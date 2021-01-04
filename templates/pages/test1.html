@@ -45,7 +45,33 @@
   {% include 'partials/_alert.html' %}
   <section id="user">
     <div class="container">
-      <h1>Please Enter the Username "{{ user.3 }}" and<br> the Password "password"
+      <h1>Please Enter the Username "{% if '/test1' == request.path %}
+        jaykell1
+        {% elif '/test2' == request.path %}
+        carmela2
+        {% elif '/test3' == request.path %}
+        cyruskell3
+        {% elif '/test4' == request.path %}
+        username4
+        {% elif '/test5' == request.path %}
+        username5
+        {% elif '/test6' == request.path %}
+        username6
+        {% endif %}
+        " and<br> the Password " 
+        {% if '/test1' == request.path %}
+        test2020
+        {% elif '/test2' == request.path %}
+        marmolino
+        {% elif '/test3' == request.path %}
+        testing8
+        {% elif '/test4' == request.path %}
+        password4
+        {% elif '/test5' == request.path %}
+        password5
+        {% elif '/test6' == request.path %}
+        password6
+        {% endif %}"
       </h1>
       <form id="form"
         {% if '/test1' == request.path %}
