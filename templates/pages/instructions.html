@@ -8,9 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@477&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'main.css' %}" />
   <style>
-      #user {
+    @media (max-height: 800px) {
+      #instructions-container {
         height: 100%;
       }
+      #user {
+        height: 100%
+      }
+    }
   </style>
   <title>Instructions | Keystroke Dynamics</title>
 </head>
