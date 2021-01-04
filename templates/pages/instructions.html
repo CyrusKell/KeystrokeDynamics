@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@477&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <style>
+    @media (min-height: 780px) {
+      #user {
+        height: 100%;
+      }
+    }
+  </style>
+  <title>Instructions | Keystroke Dynamics</title>
+</head>
+
+<body>
+  <section id="user">
+    <div class="container">
+      <div id="instructions-container">
+        <ul id="instructions-text">
+          <li>
+            Before beginning the experiment you and your parent/guardian must read and sign the <a href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=13bd64e2-3c21-490e-8203-e246d3d7c597&env=na4&acct=42f07939-6841-481e-b8ce-a26d10852ce7&v=2">Consent Form.</a>
+          </li>
+          <li>In the first part of the experiment, you will be asked to enter the account information of 6 different people who have already completed this test.</li>
+          <li>Secondly, you will be asked to create your own account by typing in a username and password of your choice 9 times.</li>
+          <li>Lastly, you will be asked to type in your own account information for the account you just created 6 times.</li>
+          <li>Please email me at <a href="mailto:cyrus.kell@aquinas-sta.org">cyrus.kell@aquinas-sta.org</a> if you have any questions or you notice any errors.</li>
+        </ul>
+        <br>
+        <br>
+        <button onclick="location.href='{% url 'test1' %}'">Next</button>
+      </div>
+    </div>
+  </section>
+  <script src="{% static 'app.js' %}"></script>
+</body>
+
+</html>

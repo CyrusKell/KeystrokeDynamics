@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@477&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <title>Self-Testing Page
+    {% if '/test1' == request.path %}
+    1
+    {% elif '/test2' == request.path %}
+    2
+    {% elif '/test3' == request.path %}
+    3
+    {% endif %}
+    | Keystroke Dynamics</title>
+</head>
+
+<body>
+  <!-- Alerts -->
+  {% include 'partials/_alert.html' %}
+  <section id="user">
+    <div class="container">
+      <h1>Please Enter the Username and Password For<br> The Account You Just Created
+      </h1>
+      <form id="form"
+        {% if '/selftest1' == request.path %} 
+        action="{% url 'selftest1' %}" method="POST">
+        {% elif '/selftest2' == request.path %}
+        action="{% url 'selftest2' %}" method="POST">
+        {% elif '/selftest3' == request.path %}
+        action="{% url 'selftest3' %}" method="POST">
+        {% elif '/selftest4' == request.path %}
+        action="{% url 'selftest4' %}" method="POST">
+        {% elif '/selftest5' == request.path %}
+        action="{% url 'selftest5' %}" method="POST">
+        {% elif '/selftest6' == request.path %}
+        action="{% url 'selftest6' %}" method="POST">
+        {% endif %}
+        {% csrf_token %}
+        <br>
+        <div class="form-group" id="form-group-1">
+          <input id="input-register-username-1" type="text" class="input" name="username" placeholder="Username"
+            minlength="8" required />
+          <input id="input-register-password-1" type="text" class="input" name="password" placeholder="Password"
+            minlength="8" required />
+        </div>
+        <div>
+          <input id="dwelldata" type="text" class="input invis-input" name="dwelldata"
+            minlength="8" required />
+            <input id="flightdata" type="text" class="input invis-input" name="flightdata"
+            minlength="8" required />
+        </div>
+        <button onclick="submitForm();" id="button-register-submit">Submit</button>
+    </div>
+    </div>
+  </section>
+  <script src="{% static 'app.js' %}"></script>
+</body>
+
+</html>

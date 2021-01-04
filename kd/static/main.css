@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Sora";
+  background: #ff8800;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+button {
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: "Sora";
+  width: 230px;
+  padding: 16px 22px;
+  margin-top: 20px;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Sora";
+  width: 200px;
+  height: 30px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#notification {
+  left: calc(50vw - 232px);
+  top: calc(50vh - 232px);
+  border-radius: 15px;
+  position: fixed;
+  z-index: 100;
+  width: 400px;
+  height: 215px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background:#ff8800;
+  text-align: center;
+}
+
+#gray-back {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#instructions-container {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15vw;
+  flex-direction: column;
+}
+
+#instructions-text {
+  font-size: 35px;
+  text-align: left;
+}
+
+#instructions-text li {
+  margin-top: 20px;
+}
+
+.invis-input {
+  height: 5px;
+  padding: 0;
+  color: #ff8800;
+  background: #ff8800;
+  margin: 0;
+}
+
+@media (max-width: 1135px) {
+  h1 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 10px;
+  }
+}
+
+
+@media (min-height: 430px) {
+  #user {
+    height: 95vh;
+  }
+}

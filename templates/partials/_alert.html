@@ -1,0 +1,24 @@
+{% if messages %}
+{% for message in messages %}
+<style>
+  #notification {
+    height: 135px;
+  }
+
+</style>
+<section id="notification">
+  <div class="alert alert-{{ message.tags }}">
+    <h2 id="notification-text">{{ message }} 
+  </div>
+  <button id="notification-button"><span aria-hidden="true">&times;</span></button>
+</section>
+<section id="gray-back">
+</section>
+<script>
+  document.getElementById('notification-button').addEventListener("click", function () {
+    document.getElementById('notification').style.display = "none";
+    document.getElementById('gray-back').style.display = "none";
+  });
+</script>
+{% endfor %}
+{% endif %}
