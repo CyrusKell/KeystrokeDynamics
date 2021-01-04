@@ -108,6 +108,14 @@
     </div>
   </section>
   <script src="{% static 'app.js' %}"></script>
+  <script>
+    window.onload = () => {
+      for (i = 0; i <= input.length - 1; i++) {
+        let myInput = input[i];
+        myInput.onpaste = e => e.preventDefault();
+      };
+    }
+  </script>
 </body>
 
 </html>
