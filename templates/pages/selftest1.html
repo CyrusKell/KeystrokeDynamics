@@ -8,12 +8,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@477&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'main.css' %}" />
   <title>Self-Testing Page
-    {% if '/test1' == request.path %}
+    {% if '/selftest1' == request.path %}
     1
-    {% elif '/test2' == request.path %}
+    {% elif '/selftest2' == request.path %}
     2
-    {% elif '/test3' == request.path %}
+    {% elif '/selftest3' == request.path %}
     3
+    {% elif '/selftest4' == request.path %}
+    4
+    {% elif '/selftest5' == request.path %}
+    5
+    {% elif '/selftest6' == request.path %}
+    6
     {% endif %}
     | Keystroke Dynamics</title>
 </head>
@@ -23,7 +29,20 @@
   {% include 'partials/_alert.html' %}
   <section id="user">
     <div class="container">
-      <h1>Please Enter the Username and Password For<br> The Account You Just Created
+      <h1>Please Enter the Username and Password For<br> The Account You Just Created 
+        {% if '/selftest1' == request.path %}
+        6 Times
+        {% elif '/selftest2' == request.path %}
+        5 More Times
+        {% elif '/selftest3' == request.path %}
+        4 More Times
+        {% elif '/selftest4' == request.path %}
+        3 More Times
+        {% elif '/selftest5' == request.path %}
+        2 More Times
+        {% elif '/selftest6' == request.path %}
+        1 More Time
+        {% endif %}
       </h1>
       <form id="form"
         {% if '/selftest1' == request.path %} 

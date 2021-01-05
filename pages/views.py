@@ -307,7 +307,7 @@ def register(request):
                     return redirect('register')
                 else:
                     #Looks good 
-                    user = User.objects.create_user(username=username1, password=password1, first_name=password1)
+                    user = User.objects.create_user(username=username1, password=password1)
 
                     profile = profile_form.save(commit=False)
                     profile.user = user
