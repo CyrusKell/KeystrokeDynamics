@@ -45,7 +45,11 @@
   {% include 'partials/_alert.html' %}
   <section id="user">
     <div class="container">
-      <h1>Please Enter the Username "{% if '/test1' == request.path %}
+      <h1>Please Enter the Username 
+        "
+        {% if '/test1' == request.path %}
+        tosquare1
+        {% elif '/test1error' == request.path %}
         tosquare1
         {% elif '/test2' == request.path %}
         cartent2
@@ -60,6 +64,8 @@
         {% endif %}
         " and<br> the Password " 
         {% if '/test1' == request.path %}
+        test2021
+        {% elif '/test1error' == request.path %}
         test2021
         {% elif '/test2' == request.path %}
         alivetalk
