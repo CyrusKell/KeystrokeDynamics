@@ -28,7 +28,7 @@
   {% if '/test1' == request.path %}
   <section id="notification">
     <h2 id="notification-text">Please Do Not Continue Until You Have Read and Signed The<br> <a
-        href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=d90bb626-0f33-462a-9ec9-e1eb7bec03a1&env=na4&acct=42f07939-6841-481e-b8ce-a26d10852ce7&v=2" target="_blank">Consent
+        href="{% url 'consentinstructions' %}" target="_blank">Consent
         Form</a></h2>
     <button id="notification-button">I Certify That I Have Read and Signed the Consent Form</button>
   </section>
