@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@477&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'main.css' %}" />
+  <style>
+    .instructions-text {
+      font-size: 25px;
+      text-align: left;
+    }
+    .instructions-text li {
+      margin-top: 20px;
+    }
+      #instructions-container {
+        height: 100%;
+      }
+      #user {
+        height: 100%
+      }
+  </style>
+  <title>Consent Form Instructions | Keystroke Dynamics</title>
+</head>
+
+<body>
+  <section id="user">
+    <div class="container">
+      <div id="instructions-container">
+        <h1>Instructions for People Under 18 Years Old</h1>
+        <ol class="instructions-text">
+          <li>Go to the <a href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=d90bb626-0f33-462a-9ec9-e1eb7bec03a1&env=na4&acct=42f07939-6841-481e-b8ce-a26d10852ce7&v=2" target="_blank">Consent Form Link</a>.</li>
+          <li>Enter your name and email address under "Student".</li>
+          <li>Enter your parent/guardian's name and email under "Parent/Guardian".</li>
+          <li>Press "I agree to use electronic records and signatures." and then press "Continue."</li>
+          <li>Read the Consent Form.</li>
+          <li>Scroll down to the bottom of the Consent Form and click "Sign".</li>
+          <li>Choose "Select Style."</li>
+          <li>Press "Adopt and Sign" and then press "Finish."</li>
+          <li>You can now close out the docusign.com page.</li>
+          <li>Have your parent/guardian log into their email that you entered earlier and click on the email they received from DocuSign.</li>
+          <li>Have your parent/guardian click "Review Document."</li>
+          <li>Have your parent/guardian repeat steps 4-8.</li>
+          <li>You can now close out the docusign.com page and begin the test when instructed by your teacher to do so.</li>
+        </ol>
+        <br>
+        <br>
+        <h1>Instructions for People 18 Years or Older</h1>
+        <ol class="instructions-text">
+          <li>Go to the <a href="https://na4.docusign.net/Member/PowerFormSigning.aspx?PowerFormId=07409c70-3f75-42d1-860c-32bbfaf1ed61&env=na4&acct=42f07939-6841-481e-b8ce-a26d10852ce7&v=2" target="_blank">Consent Form Link</a>.</li>
+          <li>Enter your name and email address under "Student/Teacher".</li>
+          <li>Press "I agree to use electronic records and signatures." and then press "Continue."</li>
+          <li>Read the Consent Form.</li>
+          <li>Scroll down to the bottom of the Consent Form and click "Sign".</li>
+          <li>Choose "Select Style."</li>
+          <li>Press "Adopt and Sign" and then press "Finish."</li>
+          <li>You can now close out the docusign.com page and begin the test when instructed by your teacher to do so.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <script src="{% static 'app.js' %}"></script>
+</body>
+
+</html>

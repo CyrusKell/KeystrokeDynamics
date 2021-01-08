@@ -545,3 +545,5 @@ def selftest6(request):
 def completed(request):
     return render(request, 'pages/completed.html')
 
+def consentinstructions(request):
+    return render(request, 'pages/consentinstructions.html')

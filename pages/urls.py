@@ -18,5 +18,6 @@ urlpatterns = [
     path('selftest4', views.selftest4, name='selftest4'),
     path('selftest5', views.selftest5, name='selftest5'),
     path('selftest6', views.selftest6, name='selftest6'),
-    path('completed', views.completed, name='completed')
+    path('completed', views.completed, name='completed'),
+    path('consentinstructions', views.consentinstructions, name='consentinstructions')
 ]
