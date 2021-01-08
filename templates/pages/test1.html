@@ -23,6 +23,11 @@
     {% endif %}
     | Keystroke Dynamics</title>
 </head>
+<style>
+  .openSans {
+    font-family: "Open Sans";
+  }
+</style>
 
 <body>
   {% if '/test1' == request.path %}
@@ -47,37 +52,42 @@
     <div class="container">
       <h1>Please Enter the Username 
         "
-        {% if '/test1' == request.path %}
-        tosquare1
-        {% elif '/test1error' == request.path %}
-        tosquare1
-        {% elif '/test2' == request.path %}
-        cartent2
-        {% elif '/test3' == request.path %}
-        greeting3
-        {% elif '/test4' == request.path %}
-        aliveclock4
-        {% elif '/test5' == request.path %}
-        creation5
-        {% elif '/test6' == request.path %}
-        english6
-        {% endif %}
+        <span class="openSans">
+          {% if '/test1' == request.path %}
+          tosquare1
+          {% elif '/test1error' == request.path %}
+          tosquare1
+          {% elif '/test2' == request.path %}
+          cartent2
+          {% elif '/test3' == request.path %}
+          greeting3
+          {% elif '/test4' == request.path %}
+          aliveclock4
+          {% elif '/test5' == request.path %}
+          creation5
+          {% elif '/test6' == request.path %}
+          english6
+          {% endif %}
+        </span>
         " and<br> the Password " 
-        {% if '/test1' == request.path %}
-        test2021
-        {% elif '/test1error' == request.path %}
-        test2021
-        {% elif '/test2' == request.path %}
-        alivetalk
-        {% elif '/test3' == request.path %}
-        evenpick6
-        {% elif '/test4' == request.path %}
-        bankbutton12
-        {% elif '/test5' == request.path %}
-        constant08
-        {% elif '/test6' == request.path %}
-        element26
-        {% endif %}"
+        <span class="openSans">
+          {% if '/test1' == request.path %}
+          test2021
+          {% elif '/test1error' == request.path %}
+          test2021
+          {% elif '/test2' == request.path %}
+          alivetalk
+          {% elif '/test3' == request.path %}
+          evenpick6
+          {% elif '/test4' == request.path %}
+          bankbutton12
+          {% elif '/test5' == request.path %}
+          constant08
+          {% elif '/test6' == request.path %}
+          element26
+          {% endif %}
+        </span>
+        "
       </h1>
       <form id="form"
         {% if '/test1' == request.path %}
