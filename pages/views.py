@@ -19,9 +19,11 @@ def avgTypingData(typingdata):
             dataValues = typingdata[key].split(",")
             totalNumber = 0
             for y in range(len(dataValues)):
-                if type(int(dataValues[y])) == int:
+                try:
                     totalNumber += int(dataValues[y])
                     typingdata[key] = round(totalNumber / len(dataValues), 1)
+                except ValueError:
+                    pass
 
     return(typingdata)
 
@@ -33,8 +35,11 @@ def scoreTypingData(newtypingdata, savedtypingdata, min, max):
         key = newtypingdatakeys[x]
         if (key in savedtypingdata):
             numOfTotal += 1
-            if (newtypingdata[key] / savedtypingdata[key] > min and newtypingdata[key] / savedtypingdata[key] < max):
-                numOfAccepted += 1
+            if type(newtypingdata[key]) == int:
+                if (newtypingdata[key] / savedtypingdata[key] > min and newtypingdata[key] / savedtypingdata[key] < max):
+                    numOfAccepted += 1
+            else:
+                numOfTotal -= 1
     return round((numOfAccepted / numOfTotal * 50), 2)
 
 
