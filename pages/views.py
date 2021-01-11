@@ -18,12 +18,13 @@ def avgTypingData(typingdata):
         if (isinstance(typingdata[key], str)):
             dataValues = typingdata[key].split(",")
             totalNumber = 0
+            voidedValues = 0
             for y in range(len(dataValues)):
                 try:
                     totalNumber += int(dataValues[y])
-                    typingdata[key] = round(totalNumber / len(dataValues), 1)
+                    typingdata[key] = round(totalNumber / (len(dataValues) - voidedValues), 1)
                 except ValueError:
-                    pass
+                    voidedValues += 1
 
     return(typingdata)
 
