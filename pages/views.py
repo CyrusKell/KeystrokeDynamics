@@ -19,8 +19,9 @@ def avgTypingData(typingdata):
             dataValues = typingdata[key].split(",")
             totalNumber = 0
             for y in range(len(dataValues)):
-                totalNumber += int(dataValues[y])
-                typingdata[key] = round(totalNumber / len(dataValues), 1)
+                if type(int(dataValues[y])) == int:
+                    totalNumber += int(dataValues[y])
+                    typingdata[key] = round(totalNumber / len(dataValues), 1)
 
     return(typingdata)
 
